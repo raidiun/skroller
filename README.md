@@ -5,9 +5,9 @@ Much like skrollr.js but using a single data-skroller attribute containing inlin
 
 Syntax is:
 
-'''html
+```html
 <[tag] class="skrollerSpecial" data-skroller="[scroll-level]:([css-style syntax]);[scroll-level]:([css-style syntax])..." >
-'''
+```
 
 Must be initialised by calling skroller.init(), then call for updates: <body onscroll="skroller.update()">
 Elements can be added after initialisation either by calling skroller.init() again or skroller.addElem()..........
