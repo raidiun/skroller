@@ -1,13 +1,20 @@
 <html>
 	<head>
 		<script src="skroller.js"></script>
+		<style>
+		</style>
 	</head>
-	<body style="height:2000px;" onload="skroller.init()" onscroll="skroller.update()">
-		<div style="height:200px;position:fixed;top:200px;opacity:0.5;" class="skrollSpecial"
-			data-skroller="100:(opacity:1;left:50px;background-color:#abffcc;);
-							250:(opacity:0;left:500px;background-color:#ab35cc;);
-							500:(opacity:1;left:500px;background-color:#ab35cc;)"">
-			Hello World...
+	<body style="height:3000px;background-color:black;" onload="skroller.init()" onscroll="skroller.update()">
+		<div style="width:100%;position:fixed;" class="skrollSpecial"
+			data-skroller="0:(top:100%);
+							1500:(top:-150%;)">
+			<img style="height:100%;" src="doge.jpeg" />
+		</div>
+		<div style="width:100%;position:fixed;display:block;background-color:red;color:white;" class="skrollSpecial"
+			data-skroller="100:(top:100%);
+							1500:(top:-50%;)">
+			Blah blah blah...<br/>
+			Lots of exciting things...
 		</div>
 		<script>
 			skroller.init();

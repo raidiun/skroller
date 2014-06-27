@@ -89,8 +89,8 @@ var skroller = {
 							return(uNumPairObject);
 							}
 						else {
-							uNumPairObject.unit = inputString.replace(/[0-9\.]/g,"");//hex, rgba, else literal unit
-							uNumPairObject.value = inputString.replace(/[^0-9\.]/g,"");
+							uNumPairObject.unit = inputString.replace(/[0-9\.\-]/g,"");//hex, rgba, else literal unit
+							uNumPairObject.value = inputString.replace(/[^0-9\.\-]/g,"");
 							return(uNumPairObject);
 							}
 						}
@@ -170,7 +170,7 @@ var skroller = {
 						    skroller.setStyle(wSkr,wSkr.opts[valsList[(valsList.length)-1]]);
 							}
 					    else {
-							while(!(valsList[idx]<currentScroll && currentScroll<valsList[idx+1])) {
+							while(currentScroll>Number(valsList[idx+1])) {
 								idx++;
 								}
 						    var gap = valsList[idx+1] - valsList[idx];
