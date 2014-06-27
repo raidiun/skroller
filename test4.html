@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<script src="skroller.js"></script>
+	</head>
+	<body style="height:2000px;" onload="skroller.init()" onscroll="skroller.update()">
+		<div style="height:200px;position:fixed;top:200px;opacity:0.5;" class="skrollSpecial"
+			data-skroller="100:(opacity:1;left:50px;background-color:#abffcc;);
+							250:(opacity:0;left:500px;background-color:#ab35cc;);
+							500:(opacity:1;left:500px;background-color:#ab35cc;)"">
+			Hello World...
+		</div>
+		<script>
+			skroller.init();
+		</script>
+	</body>
+</html>

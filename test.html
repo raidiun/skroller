@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script src="skroller.js">
+			skroller.init();
+		</script>
+		<style>
+			body {	margin:0;
+					}
+		</style>
+	</head>
+	<body style="height:2000px;" onload="skroller.init()" onscroll="skroller.update()">
+		<div class="skrollSpecial" style="background-color:black;
+											width:50%;
+											position:fixed;
+											top:50px;
+											text-align:center;
+											color:white;
+											font-family:sans-serif;
+											height:540px;
+											line-height:500px;" data-skroller="startAt:0;endAt:400;effect:fade;effectBounds:30;">
+			Welcome to Yare Cottage
+		</div>
+		<div class="skrollSpecial" style="width:50%;position:fixed;top:50px;" data-skroller="startAt:300;endAt:600;effect:fade;effectBounds:30;">
+			<img style="width:100%;position:absolute;" src="../resources/ycDeck.jpeg"/>
+		</div>
+		<div class="skrollSpecial" style="width:50%;position:fixed;top:50px;" data-skroller="startAt:500;endAt:1000;effect:fade;effectBounds:30;">
+			<img style="width:100%;position:absolute;" src="../resources/ycDeckOn.jpeg"/>
+		</div>
+		<div class="skrollSpecial" style="width:50%;position:fixed;top:50px;" data-skroller="startAt:900;endAt:1500;effect:fade;effectBounds:30;">
+			<img style="width:100%;position:absolute;" src="../resources/doge.jpeg"/>
+		</div>
+		<button style="position:fixed;top:10px;left:10px;" onclick="skroller.logScroll()">
+			WriteToLog
+		</button>
+	</body>
+</html>

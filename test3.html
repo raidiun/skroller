@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="skroller.js"></script>
+		<script>
+			function divParamShow() {
+				wElem = document.getElementById("main");
+				wElem.innerHTML = '<span style="position:absolute;bottom:0;">Param:' + skroller.getParam(wElem,skroller.callType.bidi) + '</span>';
+				}
+		</script>
+	</head>
+	<body onscroll="divParamShow();" style="height:2000px;">
+		<div id="main" style="height:200px;display:block;background-color:blue;color:white;position:relative;top:200px;left:300px;" >ThisDIV</div>
+	</body>
+</html>
+<!-- Happy with param code as of this test... (Both modes)-->
+ <div data-skroller="100:(<styleAt100>);transition1:linear;200:(<styleAt200>);"

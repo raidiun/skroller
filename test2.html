@@ -1,0 +1,10 @@
+<html>
+	<body>
+		<span id="oc"></span>
+		<div id="help" style="position:fixed;left:100px;top:130px;display:block;background-color:lightblue;">Help!</div>
+		<script>
+			var divBCR = document.getElementById("help").getBoundingClientRect();
+			document.getElementById("oc").innerHTML = "WinH:" + window.innerHeight + " WinW:" + window.innerWidth + " divX:" + divBCR.left + " divY:" + divBCR.top;
+		</script>
+	</body>
+</html>
