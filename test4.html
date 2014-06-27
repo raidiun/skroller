@@ -2,19 +2,52 @@
 	<head>
 		<script src="skroller.js"></script>
 		<style>
+			.sectTitle {	width:50%;
+							position:fixed;
+							display:block;
+							background-color:rgba(100,100,100,0.3);
+							color:red;
+							text-align:center;
+							font-family:"Comic Sans MS";
+							font-size:30px;
+							margin-left:-25%;
+							left:50%;
+							padding:0.5em;
+							}
+		
+			.sectBkgd {		width:100%;
+							height:110%;
+							}
 		</style>
 	</head>
 	<body style="height:3000px;background-color:black;" onload="skroller.init()" onscroll="skroller.update()">
 		<div style="width:100%;position:fixed;" class="skrollSpecial"
-			data-skroller="0:(top:100%);
-							1500:(top:-150%;)">
-			<img style="height:100%;" src="doge.jpeg" />
+			data-skroller="0:(top:0%);
+							75:(top:0%);
+							100:(top:-100%;);">
+			<img style="width:100%;height:100%;" src="r2d2.jpeg"/>
 		</div>
-		<div style="width:100%;position:fixed;display:block;background-color:red;color:white;" class="skrollSpecial"
+		<div class="skrollSpecial sectTitle"
+			data-skroller="0:(top:70%);
+							25:(top:50%);
+							75:(top:45%);
+							100:(top:-50%;);">
+			This is R2-D2.
+		</div>
+		
+		<div style="width:100%;position:fixed;" class="skrollSpecial"
 			data-skroller="100:(top:100%);
-							1500:(top:-50%;)">
-			Blah blah blah...<br/>
-			Lots of exciting things...
+							400:(top:0%;);
+							1000:(top:-10%);
+							1500:(top:-110%)">
+			<img class="sectBkgd" src="doge.jpeg" />
+		</div>
+		<div class="skrollSpecial sectTitle"
+			data-skroller="100:(top:100%);
+							500:(top:50%;);
+							1000:(top:50%;);
+							1500:(top:-120%;);">
+			This is doge.
 		</div>
 		<script>
 			skroller.init();

@@ -108,6 +108,9 @@ var skroller = {
 					
 					for (var idx=0, l = skrOptionsStrs.length; idx<l; idx++) {
 						var splitStr = skrOptionsStrs[idx].split(regexFullColon);
+					    if((splitStr[0])[-1] == '%') {//If last value is a '%', is a style with relative scroll
+						    splitStr[0] = skroller.getRScroll(splitStr[0]);
+							}
 					    skrOptions[splitStr[0]] = splitStr[1];
 						}
 											   
@@ -122,6 +125,12 @@ var skroller = {
 				    return(skrOptions);
 					},
 	
+    getRScroll:	function(optionScrollValue) {
+				    var fullHeight = window.innerHeight;
+				    var oSVNumeric = Number(optionScrollValue.slice(0,-1));
+				    return((oSVNumeric/100)*fullHeight);
+					},
+											   
 	transitionType:	{
 					linear:		0,
 					quadratic:	1,
@@ -175,7 +184,7 @@ var skroller = {
 								}
 						    var gap = valsList[idx+1] - valsList[idx];
 						    var distIntoGap = currentScroll - valsList[idx];
-						    var style = skroller.blendStyles(wSkr.opts[valsList[idx]],wSkr.opts[valsList[idx+1]],distIntoGap/gap);
+						    var style = skroller.blendStyles(wSkr.opts[valsList[idx]],wSkr.opts[valsList[idx+1]],(distIntoGap/gap));
 						    skroller.setStyle(wSkr,style);
 							}
 						}
